@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new.css')}}">
+</head>
+
+
+<body>
+    <div id="menubar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="admission.html">Admission</a></li>
+                <li><a href="school images.html">Gallery</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>Welcome to the Dashboard</h1>
+    <h4>Search a book by its ISBN, Author's name or by the title of the book</h4>
+    <div>
+        <form action="/dashboard" method="POST">
+            <input type="text" name="searchbar" placeholder="Search your book" />
+            <!-- <a class="btn btn-primary" href="reviews.html" role="button">Search Link</a> -->
+            <button class="btn btn-primary" type="submit">Search</button>
+        </form>
+    </div>
+</body>
+
+</html>
